@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -101,4 +102,4 @@ const PersonalWebsite = () => {
   );
 };
 
-export default PersonalWebsite;
+ReactDOM.render(<PersonalWebsite />, document.getElementById('root'));
