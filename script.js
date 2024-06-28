@@ -1,12 +1,17 @@
 // Sample blog posts
 const blogPosts = [
   {
+    title: "Earthquake Detection: Combining CNN and RNN in Seismic Phase Picking",
+    date: "2023-06-28",
+    preview: "The recent expansion of seismic data and computing resources enables flourishing applications of deep learning in seismology. Many studies aim at automatically picking P and S arrivals, especially those buried in noises.",
+    link: "MLProject.html"
+  },
+  {
     title: "Paper Review: Generalized Seismic Phase Detection with Deep Learning",
     date: "2019-11-06",
     preview: "This paper introduces a generalized phase detection (GPD) framework using deep learning to detect seismic body wave phases.",
     link: "paper-review-3.html"
   },
-
   {
     title: "Paper Review: Regional extent of the large coseismic slip zone of the 2011 Mw 9.0 Tohoku‐Oki earthquake delineated by on‐fault aftershocks",
     date: "2019-10-28",
@@ -75,6 +80,18 @@ function closeModal() {
   modal.style.display = "none";
 }
 
+// Function to set the image source
+function setImage(select) {
+  const img = document.querySelector('img[name="image-swap"]');
+  img.src = select.value;
+}
+
+// Function to set the iframe source
+function setHTML(select) {
+  const iframe = document.querySelector('iframe[name="html-swap"]');
+  iframe.src = select.value;
+}
+
 // Call the functions when the page loads
 window.onload = function() {
   displayBlogPosts();
@@ -84,3 +101,11 @@ window.onload = function() {
 // Event listener for closing the modal
 document.getElementById('modal').addEventListener('click', closeModal);
 
+
+// Scroll event listener to make the post slider scroll with page scroll
+window.addEventListener('scroll', () => {
+  const postSlider = document.querySelector('.post-slider');
+  if (postSlider) {
+    postSlider.scrollTop += window.scrollY - window.scrollY / 10;  // Adjust the value to control scroll speed
+  }
+});

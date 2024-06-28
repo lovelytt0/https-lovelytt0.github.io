@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earthquake Detection: Combining CNN and RNN in Seismic Phase Picking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tian Feng</h1>
+      <p>AI Researcher | Data Scientist | Geophysicist</p>
+    </header>
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#publications">Publications</a>
+    </nav>
+
+    
+    <main>
+      <section>
+        <h2>Earthquake Detection</h2>
+        <p>Combining CNN and RNN in Seismic Phase Picking</p>
+        <h2>Abstract</h2>
+        <p>
+          The recent expansion of seismic data and computing resources enables flourishing applications of deep learning in seismology. Many studies aim at automatically picking P and S arrivals, especially those buried in noises. Dozens of deep-learning-based models prove to be efficient in detecting phases of local events (&lt;300km). Most of them take seismograms/spectrograms as input data and output the probability of P/S/background phases. Previous studies treat inputs as images and focus on the Convolutional Neural Network (CNN). CNNs employ filters within convolutional layers to extract features from inputs, and are often used in computer vision to recognize objects and patterns in images. Recent studies notice that input seismograms/spectrograms are sequential data, more like audio. Recurrent Neural Networks (RNN) are designed to interpret temporal or sequential information, which is widely used in speech recognition. However, RNNs cannot be stacked into very deep models, and training an RNN is a very difficult task. We solve this problem by extracting features from a pre-trained CNN model and then training an RNN on top of it. Compared with models trained directly from CNNs (PhaseNet and GPD), our hybrid model has higher accuracy and precision in the testing set. Besides, the hybrid model is more robust against low SNR of waveforms and far hypocentral distances, which indicates better generalization ability.
+        </p>
+      </section>
+
+      <section>
+        <h2>Introduction Slide</h2>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vShpPT7UiAsxp3JLq_7af5vaF46iwBuKNdkiGMXyA6MURner578EOS9RUDW98nd0vstrrk9RsbGV2Dn/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="780" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </section>
+
+      <section>
+        <h2>Case Study In Aegean Sea</h2>
+        <p>Study time range: 07/01/2020 - 11/19/2020</p>
+        <p>Number of seismic stations used: 132</p>
+        <p>The following figure shows the station distribution:</p>
+        <img src="./ActivePlots/station.png" style="width: 1000px; height: 625px;" alt="Station Distribution" />
+      </section>
+
+      <section>
+        <h2>Original Catalog V.S. Machine Learning Catalog</h2>
+        <p>The following figure shows the earthquake distribution of Original/Machine Learning Catalog (color bar shows the depth in km):</p>
+        <select class="selectpicker form-control" data-style="btn-primary" data-width="1000px" aria-label=".form-select-lg example" onchange="setImage(this);">
+          <option selected>Open this select menu</option>
+          <option value="./ActivePlots/ODC.png">Original Catalog</option>
+          <option value="./ActivePlots/Hypo.png">Machine Learning Catalog</option>
+        </select>
+        <img src="./ActivePlots/ODC.png" name="image-swap" style="width: 1000px; height: 625px;" alt="Catalog Comparison" />
+      </section>
+
+      <section>
+        <h2>3D Scatter Plot Of Earthquakes Near Faults</h2>
+        <p>Days are relative to the origin time of Mw 7.0 earthquake on 30 October 2020.</p>
+        <select class="selectpicker form-control" data-style="btn-blue" data-width="1000px" aria-label=".form-select-lg example" onchange="setHTML(this);">
+          <option selected>Open this select menu</option>
+          <optgroup label="Machine Learning">
+            <option value="./ActivePlots/HypoDD1.html">Fault A (Machine Learning)</option>
+            <option value="./ActivePlots/HypoDD2.html">Fault B (Machine Learning)</option>
+          </optgroup>
+          <optgroup label="Original">
+            <option value="./ActivePlots/ODC1.html">Fault A (Original)</option>
+            <option value="./ActivePlots/ODC2.html">Fault B (Original)</option>
+          </optgroup>
+        </select>
+        <iframe src="./ActivePlots/HypoDD1.html" name="html-swap" style="width: 1000px; height: 625px; border: 2px solid blue;"></iframe>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/lovelytt0" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tian-feng-690b98132/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:tianfengseis@gmail.com">Email</a>
+      </div>
+      <p>© 2024 Tian Feng. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
