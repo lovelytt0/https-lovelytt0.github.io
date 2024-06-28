@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Review: Generalized Seismic Phase Detection with Deep Learning - Tian Feng</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tian Feng</h1>
+      <p>AI Researcher | Data Scientist | Geophysicist</p>
+    </header>
+    
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#publications">Publications</a>
+    </nav>
+
+    <main>
+      <article>
+        <h2>Paper Review: Generalized Seismic Phase Detection with Deep Learning</h2>
+        <p class="date">2019-11-06</p>
+        <p><em>Authors: Zachary E. Ross, Men-Andrin Meier, Egill Hauksson, Thomas H. Heaton</em></p>
+        
+        <h3>Abstract</h3>
+        <p>This paper introduces a generalized phase detection (GPD) framework using deep learning to detect seismic body wave phases. The authors trained a convolutional neural network (ConvNet) on the vast hand-labeled data archives of the Southern California Seismic Network to detect P- and S-waves. The ConvNet demonstrates high sensitivity and robustness in detecting phases, even in high background noise and for events not represented in the training set.</p>
+
+        <h3>Key Points</h3>
+        <ul>
+          <li>The GPD framework can detect P- and S-waves of very small to very large earthquakes without the need for explicit waveform templates.</li>
+          <li>The ConvNet is extremely sensitive and robust in detecting phases, even when masked by high background noise.</li>
+          <li>The method can be applied to new data not represented in the training set, including very large magnitude events.</li>
+        </ul>
+
+        <h3>Methods</h3>
+        <h4>Neural Network Architecture</h4>
+        <p>The authors used a Convolutional Neural Network (ConvNet) with the following characteristics:</p>
+        <ul>
+          <li>4 convolution layers and 2 fully-connected layers</li>
+          <li>Trained on 4.5 million 3-component seismic records</li>
+          <li>Data were detrended, high-pass filtered above 2 Hz, and resampled at 100 Hz</li>
+          <li>Magnitude range of the training data: −0.81 < M < 5.7</li>
+          <li>Epicentral distances less than 100 km were used</li>
+        </ul>
+
+        <h4>Training Process</h4>
+        <p>The network was trained using mini-batches of 480 records. The 3rd epoch had the highest prediction accuracy on the validation set (99%), employing an early stopping technique.</p>
+
+        <h3>Results</h3>
+        <h4>Classification Performance</h4>
+        <ul>
+          <li>Precision is very high (>99%) for both P- and S-phases</li>
+          <li>Recall is between 96% and 99% for most threshold choices</li>
+        </ul>
+
+        <h4>Application to Real-World Data</h4>
+        <p>The authors demonstrated the GPD framework's effectiveness by applying it to:</p>
+        <ul>
+          <li>The 2016 Bombay Beach, California Swarm</li>
+          <li>The 2016 Mw 7.0 Kumamoto, Japan Earthquake</li>
+        </ul>
+
+        <h3>Discussion</h3>
+        <p>The authors note that the network learns to recognize attributes of the 3D particle motion both before and after the phase arrival, as well as some frequency-based information. They suggest that an important potential application of GPD is in Earthquake Early Warning (EEW) systems, to improve discrimination between genuine earthquake signals and other spurious signals that could lead to false detections.</p>
+
+        <h3>Implications</h3>
+        <p>This GPD framework has the potential to significantly improve earthquake monitoring and catalogs, which form the underlying basis for a wide range of basic and applied seismological research. It could enhance the detection of seismic events across a wide range of magnitudes and in various geological settings, potentially leading to more comprehensive and accurate earthquake catalogs.</p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/lovelytt0" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tian-feng-690b98132/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:tianfengseis@gmail.com">Email</a>
+      </div>
+      <p>© 2024 Tian Feng. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
