@@ -3,15 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tian Feng - AI Researcher | Geophysicist</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <title>Your Name - AI & Geophysics Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-gradient {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+    </style>
 </head>
-<body>
-    <div id="root"></div>
-    <script type="text/babel" src="index.js"></script>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-gradient text-white py-8">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">Your Name</h1>
+            <p class="text-xl mt-2">AI Specialist | Geophysics Researcher</p>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <ul class="flex space-x-6 py-4">
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#publications" class="hover:text-blue-600">Publications</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="about" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-lg">I am a passionate professional with expertise in both Artificial Intelligence and Geophysics. My interdisciplinary background allows me to bring unique insights to complex problems in earth sciences and beyond.</p>
+        </section>
+
+        <section id="skills" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Skills</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">AI & Machine Learning</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Deep Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>TensorFlow, PyTorch</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Geophysics</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Seismic Data Analysis</li>
+                        <li>Remote Sensing</li>
+                        <li>GIS</li>
+                        <li>Geophysical Modeling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">AI-Driven Seismic Interpretation</h3>
+                    <p>Developed a deep learning model to automate seismic facies classification, improving efficiency by 40%.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">NLP for Geoscience Literature Analysis</h3>
+                    <p>Created a tool to extract and summarize key findings from geophysics research papers using NLP techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Selected Publications</h2>
+            <ul class="list-disc list-inside">
+                <li>"Machine Learning Applications in Geophysical Data Processing" - Journal of Geophysical Research (2023)</li>
+                <li>"Artificial Intelligence in Earthquake Prediction: A Comprehensive Review" - Geophysical Journal International (2022)</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+            <p class="text-lg mb-4">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <a href="mailto:your.email@example.com" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Email Me</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
