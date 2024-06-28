@@ -1,99 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - AI & Geophysics Professional</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .bg-gradient {
-            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tian Feng's Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-gradient text-white py-8">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold">Your Name</h1>
-            <p class="text-xl mt-2">AI Specialist | Geophysics Researcher</p>
-        </div>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tian Feng</h1>
+      <p>AI Researcher | Geophysicist</p>
+      <div class="social-links">
+        <a href="https://github.com/lovelytt0" target="_blank" rel="noopener noreferrer">
+          <i class="icon-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tian-feng-690b98132/" target="_blank" rel="noopener noreferrer">
+          <i class="icon-linkedin"></i>
+        </a>
+        <a href="mailto:tianfengseis@gmail.com">
+          <i class="icon-mail"></i>
+        </a>
+      </div>
     </header>
 
-    <nav class="bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <ul class="flex space-x-6 py-4">
-                <li><a href="#about" class="hover:text-blue-600">About</a></li>
-                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-                <li><a href="#publications" class="hover:text-blue-600">Publications</a></li>
-                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="tabs">
+      <button class="active">About</button>
+      <button>Experience</button>
+      <button>Education</button>
+      <button>Publications</button>
+    </div>
 
-    <main class="container mx-auto px-4 py-8">
-        <section id="about" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">About Me</h2>
-            <p class="text-lg">I am a passionate professional with expertise in both Artificial Intelligence and Geophysics. My interdisciplinary background allows me to bring unique insights to complex problems in earth sciences and beyond.</p>
-        </section>
+    <div class="tab-content">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>I am a Data Scientist with a Ph.D. in Geophysics, specializing in AI and deep learning. My expertise lies in developing AI solutions and conducting impactful research, as demonstrated by major projects at Capital One and notable publications. I am skilled in using large language models (LLM) and advanced machine learning to address complex challenges.</p>
+      </div>
 
-        <section id="skills" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">Skills</h2>
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">AI & Machine Learning</h3>
-                    <ul class="list-disc list-inside">
-                        <li>Deep Learning</li>
-                        <li>Natural Language Processing</li>
-                        <li>Computer Vision</li>
-                        <li>TensorFlow, PyTorch</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">Geophysics</h3>
-                    <ul class="list-disc list-inside">
-                        <li>Seismic Data Analysis</li>
-                        <li>Remote Sensing</li>
-                        <li>GIS</li>
-                        <li>Geophysical Modeling</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+      <div class="card">
+        <h3>Work Experience</h3>
+        <p>Principal Data Scientist (Generative AI) - Capital One</p>
+        <p>Jun 2022 – Present | New York, NY</p>
+        <ul>
+          <li>Developed an AI agent MVP powered by LLM for customer service tasks.</li>
+          <li>Collaborated on LLM-crafted personalized marketing emails.</li>
+          <li>Developed and deployed three Deep Learning models into production.</li>
+        </ul>
+        <p>PhD Data Science Intern - Capital One</p>
+        <p>Jun 2021 – Aug 2021 | New York, NY</p>
+        <ul>
+          <li>Developed an advanced ASR system for call transcription.</li>
+        </ul>
+      </div>
 
-        <section id="projects" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">AI-Driven Seismic Interpretation</h3>
-                    <p>Developed a deep learning model to automate seismic facies classification, improving efficiency by 40%.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">NLP for Geoscience Literature Analysis</h3>
-                    <p>Created a tool to extract and summarize key findings from geophysics research papers using NLP techniques.</p>
-                </div>
-            </div>
-        </section>
+      <div class="card">
+        <h3>Education</h3>
+        <p>Ph.D. in Geophysics and Space Physics</p>
+        <p>University of California, Los Angeles (UCLA) | May 2022</p>
+        <p>Bachelor of Science in Geophysics, minor in Computer Science</p>
+        <p>Nanjing University | Jun 2016</p>
+      </div>
 
-        <section id="publications" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">Selected Publications</h2>
-            <ul class="list-disc list-inside">
-                <li>"Machine Learning Applications in Geophysical Data Processing" - Journal of Geophysical Research (2023)</li>
-                <li>"Artificial Intelligence in Earthquake Prediction: A Comprehensive Review" - Geophysical Journal International (2022)</li>
-            </ul>
-        </section>
+      <div class="card">
+        <h3>Selected Publications</h3>
+        <ul>
+          <li>Feng, T., Meng, L., & Huang, H. (2020). Detecting Offshore Seismicity: Combining Backprojection Imaging and Matched‐filter Detection. Journal of Geophysical Research: Solid Earth.</li>
+          <li>Feng, T., & Meng, L. (2018). A High‐Frequency Distance Metric in Ground‐Motion Prediction Equations Based on Seismic Array Backprojections. Geophysical Research Letters.</li>
+          <li>Bao, H., Ampuero, J. P., Meng, L., Fielding, E. J., Liang, C., Milliner, C. W., Feng, T. & Huang, H. (2019). Early and persistent supershear rupture of the 2018 magnitude 7.5 Palu earthquake. Nature Geoscience.</li>
+        </ul>
+      </div>
+    </div>
 
-        <section id="contact" class="mb-12">
-            <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-            <p class="text-lg mb-4">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-            <a href="mailto:your.email@example.com" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Email Me</a>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
-        </div>
+    <footer>
+      <p>© 2024 Tian Feng. All rights reserved.</p>
+      <p><a href="mailto:tianfengseis@gmail.com">Contact Me</a></p>
     </footer>
+  </div>
 </body>
 </html>
